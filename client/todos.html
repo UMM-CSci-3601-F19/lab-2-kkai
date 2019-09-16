@@ -8,8 +8,9 @@
   <script type="text/javascript" src="javascript/todos.js"></script>
 </head>
 <body>
+<a href="/">HOME</a>
 <button type="button" id="getAll">Get All Todos</button>
-<button type="button" id="goBack">Go Back</button>
+<button value="Refresh Page" onClick="window.location.reload();">Clear Page</button>
 
 <hr/>
 
@@ -29,9 +30,6 @@ Search Todos by ID:
 
     var element = document.getElementById('getAll');
     element.addEventListener("click", getAllTodos, true);
-
-    element = document.getElementById('goBack');
-    element.addEventListener("click", goAllBack, true);
 
     element = document.getElementById('getTodosById');
     element.addEventListener("click", getAllTodosById, true);
