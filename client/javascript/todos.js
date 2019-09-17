@@ -46,6 +46,10 @@ function getAllTodosByFilter() {
     returnString = returnString + "limit=" + document.getElementById("limit").value + "&";
   }
   console.log(returnString);
+  if (document.getElementById("orderBy").value !== ""){
+    returnString = returnString + "orderBy=" + document.getElementById("orderBy").value + "&";
+  }
+  console.log(returnString);
   get(returnString, function (returned_json) {
     document.getElementById('jsonDump').innerHTML = returned_json;
   });

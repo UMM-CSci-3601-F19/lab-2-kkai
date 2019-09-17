@@ -44,20 +44,17 @@ Category: <br/>
 </select> <br/>
 Limit: <br/>
 <input type="text" name="limit" id="limit"> <br/>
+Order by: <br/>
+<select id="orderBy">
+  <option value=""></option>
+  <option value="owner">Owner</option>
+  <option value="status">Status</option>
+  <option value="body">Body</option>
+  <option value="category">Category</option>
+</select> <br/>
 <br/>
 <button type="button" id="getTodosByFilter"> Search</button>
-<br/>
-<br/>
-Search Todos
-<div class="dropdown">
-  <button class="dropbtn">Order By</button>
-  <div class="dropdown-content">
-    <a href="/api/todos?orderBy=owner">Owner</a>
-    <a href="/api/todos?orderBy=status">Status</a>
-    <a href="/api/todos?orderBy=body">Body</a>
-    <a href="/api/todos?orderBy=category">Category</a>
-  </div>
-</div>
+
 <script>
     window.onload = function () {
         console.log("The page is loaded now!");
