@@ -34,8 +34,8 @@ function getAllTodosByFilter() {
     }
   }
   console.log(returnString);
-  if (document.getElementById("body").value !== ""){
-    returnString = returnString + "body=" + document.getElementById("body").value + "&";
+  if (document.getElementById("contains").value !== ""){
+    returnString = returnString + "contains=" + document.getElementById("contains").value + "&";
   }
   console.log(returnString);
   if (document.getElementById("category").value !== ""){
