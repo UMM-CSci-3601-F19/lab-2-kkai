@@ -26,23 +26,25 @@ Search Todos by ID:
 Search by multiple-choices <br/>
 Owner: <br/>
 <input type="text" name="owner" id="owner"> <br/>
-Category:
+Status: <br/>
+<select id="status">
+  <option value=""></option>
+  <option value="complete">complete</option>
+  <option value="incomplete">incomplete</option>
+</select> <br/>
+Body: <br/>
+<input type="text" name="contains" id="body"> <br/>
+Category: <br/>
 <select id="category">
   <option value=""></option>
   <option value="groceries">groceries</option>
   <option value="homework">homework</option>
   <option value="software design">software design</option>
   <option value="video games">video games</option>
-</select> <br />
-<!--
-Status: <br />
-<input type= "radio" name="status" value="complete"> complete
-<input type= "radio" name="status" value="incomplete"> incomplete <br />
-Body: <br />
-<input type= "text" name="contains" id="Body"> <br />
-Limit*: <br />
-<input type= "text" name="limit" id="limit"> (9999 is default value for limit) <br />
--->
+</select> <br/>
+Limit: <br/>
+<input type="text" name="limit" id="limit"> <br/>
+<br/>
 <button type="button" id="getTodosByFilter"> Search</button>
 <br/>
 <br/>

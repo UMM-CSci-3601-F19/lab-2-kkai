@@ -46,22 +46,22 @@ public class TodoDatabase{
   public Todo[] listTodos(Map<String, String[]> queryParams) {
     Todo[] filteredTodos = allTodos;
 
-    if(queryParams.containsKey("owner") /*&& queryParams.get("owner")[0] != "null"*/) {
+    if(queryParams.containsKey("owner")) {
       String targetOwner = queryParams.get("owner")[0];
       filteredTodos = filterTodosByOwner(filteredTodos, targetOwner);
     }
 
-    if(queryParams.containsKey("status") && queryParams.get("status")[0] != "null") {
+    if(queryParams.containsKey("status")) {
       String targetStatus = queryParams.get("status")[0];
       filteredTodos = filterTodosByStatus(filteredTodos, targetStatus);
     }
 
-    if(queryParams.containsKey("contains") && queryParams.get("contains")[0] != "null") {
+    if(queryParams.containsKey("contains")) {
       String targetBody = queryParams.get("contains")[0];
       filteredTodos = filterTodosByBody(filteredTodos, targetBody);
     }
 
-    if(queryParams.containsKey("category") /*&& queryParams.get("category")[0] != "null"*/) {
+    if(queryParams.containsKey("category")) {
       String targetCategory = queryParams.get("category")[0];
       filteredTodos = filterTodosByCategory(filteredTodos, targetCategory);
     }
@@ -81,7 +81,7 @@ public class TodoDatabase{
       }
     }
 */
-    if(queryParams.containsKey("limit") && queryParams.get("limit")[0] != "null") {
+    if(queryParams.containsKey("limit")) {
       String targetLimit = queryParams.get("limit")[0];
       filteredTodos = filterTodosByLimit(filteredTodos, targetLimit);
     }
